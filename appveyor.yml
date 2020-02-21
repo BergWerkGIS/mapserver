@@ -86,6 +86,7 @@ test_script:
   - cd %BUILD_FOLDER%/msautotest/mspython
   - "%PYTHON_EXECUTABLE% run_all_tests.py"
   - refreshenv
+  - set path=%BUILD_FOLDER%\build\mapscript\csharp\Release:%path%
   - dotnet script %BUILD_FOLDER%\mapscript\csharp\tests\basic.csx
 
 deploy: off
