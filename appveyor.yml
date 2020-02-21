@@ -87,7 +87,7 @@ test_script:
   - "%PYTHON_EXECUTABLE% run_all_tests.py"
   - refreshenv
   - set path=%BUILD_FOLDER%\build\mapscript\csharp\Release:%path%
-  - %BUILD_FOLDER%\sdk\%SDK%\sdkshell setenv
+  - "%BUILD_FOLDER%\sdk\%SDK%\sdkshell.bat" setenv
   - where mapscript.dll
   - dotnet script %BUILD_FOLDER%\mapscript\csharp\tests\basic.csx
 
